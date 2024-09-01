@@ -49,15 +49,14 @@ In this task, you are continuing work from the previous project, focusing onDock
 2. Create PostgreSQL database instance on [Render](http://render.com/).
 3. Once database is created, copy the __External Database URL__ in notepad for future use.
 4. Ensure your Dockerfile is correctly set up.
-5. Run the following command to build the Docker image : docker build -t book-catalog:1 .
+5. Run the following command to build the Docker image : `docker build -t book-catalog:1 .`
 6. Ensure you have a deployment.yaml file to define how your application will be deployed on Kubernetes.
 7. Update the DATABASE_URL value in deployments.yaml file with the External Database URL.
-8. Use kubectl apply -f deployments.yaml to deploy your application to the Kubernetes cluster.
-9. To ensure our deployments are running, use this command kubectl get deployments.
-10. To ensure our pods are running, use this command kubectl get pods.
-11. If the pod is not running we have to check the logs for errors, To check the logs use this command kubectl logs pod-name.
-12. To verify the service is up and running, use this command kubectl get services.
+8. Use `kubectl apply -f deployments.yaml` to deploy your application to the Kubernetes cluster.
+9. To ensure our deployments are running, use this command `kubectl get deployments`.
+10. To ensure our pods are running, use this command `kubectl get pods`.
+11. If the pod is not running we have to check the logs for errors, To check the logs use this command `kubectl logs pod-name`.
+12. To verify the service is up and running, use this command `kubectl get services`.
 13. To access the application, If we are using a local cluster like Docker Desktop, the NodeIP is usually localhost. If we are using a cloud provider, find the external IP of the node. In this case we are using Nodeport, so to access the application open a browser and
-navigate to http://<NodeIP>:30000/docs` url in browser. Check different endpoints via Swagger Docs such as `create new book`, `get all book`, and `delete book`. Replace <NodeIP> with the actual IP address or
-localhost if running locally
+navigate to `http://<NodeIP>:30000/docs` url in browser. Check different endpoints via Swagger Docs such as `create new book`, `get all book`, and `delete book`. Replace <NodeIP> with the actual IP address or localhost if running locally
 
